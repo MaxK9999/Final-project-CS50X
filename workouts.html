@@ -1,0 +1,71 @@
+{% extends 'dashboard.html' %}
+
+{% block title %}
+    My Workouts
+{% endblock title %}
+
+
+{% block main %}
+<div class="workouts">
+    <form action="/add_workout" method="post">
+        <label for="workout-type">Select Workout Type: </label>
+        <select id="workout-type" name="workout_type">
+            <option value="Disabled readonly input"></option>
+            <option value="running">Running</option>
+            <option value="fitness">Fitness</option>
+            <option value="swimming">Swimming</option>
+        </select>
+        
+        <!-- Conditional form fields based on workout type -->
+        <div id="running-form" style="display: none;">
+            <label for="distance">Distance (km):</label>
+            <input type="number" id="distance" name="distance">
+            <label for="time">Time (minutes):</label>
+            <input type="number" id="time" name="time">
+        </div>
+
+        <div id="fitness-form" style="display: none;">
+            <label for="sets">Sets:</label>
+            <input type="number" id="sets" name="sets">
+            <label for="reps">Reps:</label>
+            <input type="number" id="reps" name="reps">
+        </div>
+
+        <div id="swimming-form" style="display: none;">
+            <label for="distance">Distance (km):</label>
+            <input type="number" id="distance" name="distance">
+            <label for="time">Time (minutes):</label>
+            <input type="number" id="time" name="time">
+        </div>
+
+        <button type="submit">Add Workout</button>
+    </form>
+</div>
+
+<script>
+document.getElementById("workout-type").addEventListener("change", function() {
+    var selectedType = this.value;
+    var runningForm = document.getElementById("running-form");
+    var fitnessForm = document.getElementById("fitness-form");
+    var swimmingForm = document.getElementById("swimming-form");
+
+    // Hide all form sections
+    runningForm.style.display = "none";
+    fitnessForm.style.display = "none";
+    swimmingForm.style.display = "none";
+
+    // Show the selected form section
+    if (selectedType === "running") {
+        runningForm.style.display = "block";
+    } else if (selectedType === "fitness") {
+        fitnessForm.style.display = "block";
+    } else if (selectedType === "swimming") {
+        swimmingForm.style.display = "block";
+    }
+
+    // Add more conditions for other workout types
+});
+</script>
+</body>
+</html>
+{% endblock main %}
