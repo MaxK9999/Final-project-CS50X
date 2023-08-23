@@ -1,0 +1,12 @@
+--------------21-08-2023--------------------
+login page as close as done, next thing to do is link the register page and make sure 
+database is set up.   -> DONE, succesfully setup and everything works!!!!!
+
+--------------22-08-2023--------------------
+tidy up home and about page.
+check if you can fix flash messages, perhaps tutorial? -> DONE, home/about page succesfully setup!!!
+
+--------------23-08-2023--------------------
+continue with "my workouts" and other pages.
+create table to store workouts and make an interface with progress data and the stored workouts. -> DONE, workouts table setup succesfully!!!
+tidy up workouts page, make sure that all forms have all the corresponding data to fill in the SQL table.
