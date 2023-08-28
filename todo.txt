@@ -9,4 +9,32 @@ check if you can fix flash messages, perhaps tutorial? -> DONE, home/about page 
 --------------23-08-2023--------------------
 continue with "my workouts" and other pages.
 create table to store workouts and make an interface with progress data and the stored workouts. -> DONE, workouts table setup succesfully!!!
-tidy up workouts page, make sure that all forms have all the corresponding data to fill in the SQL table.
+
+--------------24-08-2023--------------------
+error messages and other flash messages setup and working -> DONE
+make landing page responsive on smaller devices -> HALF DONE, site is somewhat responsive but tends 
+                                                    to have small visual glitches when transforming from certain dimensions.
+tweaked database to ensure that email is registered in the users table aswell -> DONE
+login and register routing more bulletproofed -> DONE 
+3 cards that showcase what type of workouts users may add, visible on dashboard page -> DONE
+
+
+--------------28-08-2023--------------------
+work on the links on the photos to link directly to page that logs workouts. -> DONE 
+implement workouts page where you can view and edit/delete past workouts.
+
+
+dashboard page:
+
+tidy up workouts page, make sure that all forms have all the corresponding data to fill in the SQL table. -> DONE
+make the workouts page have 3 clickable photos linked to adding said workout (i.e. running, swimming, fitness). -> DONE
+
+
+workouts page:
+
+need to make progress bar/circle show when user wants to set a goal that he wishes to achieve.
+see the most recent workout displayed under the progress bar.
+
+
+account information page?
+page where user can change his password or delete his account.

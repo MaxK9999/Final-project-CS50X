@@ -4,68 +4,34 @@
     My Workouts
 {% endblock title %}
 
-
 {% block main %}
-<div class="workouts">
-    <form action="/add_workout" method="post">
-        <label for="workout-type">Select Workout Type: </label>
-        <select id="workout-type" name="workout_type">
-            <option value="Disabled readonly input"></option>
-            <option value="running">Running</option>
-            <option value="fitness">Fitness</option>
-            <option value="swimming">Swimming</option>
-        </select>
-        
-        <!-- Conditional form fields based on workout type -->
-        <div id="running-form" style="display: none;">
-            <label for="distance">Distance (km):</label>
-            <input type="number" id="distance" name="distance">
-            <label for="time">Time (minutes):</label>
-            <input type="number" id="time" name="time">
+<h1 class="my_workouts_title">My Workouts</h1>
+<div class="wrapper_workouts_page">
+    <div class="container_workouts_page">
+        <div class="my_workouts">
+            {% for workout in workouts %}
+            <div class="workout">
+                <p>Workout type: {{ workout.workout_type }}</p>
+                <p>Date: {{ workout.date }}</p>
+                <p>Distance: {{ workout.distance }}</p>
+                <p>Time: {{ workout.time }}</p>
+                <p>Exercise: {{ workout.exercise }}</p>
+                <p>Completed: {{ workout.completed }}</p>
+                <div class="workout-actions">
+                    <a href="{{ url_for('edit_workout', workout_id=workout[0]) }}" class="edit-button">Edit</a>
+                    <a href="{{ url_for('delete_workout', workout_id=workout[0]) }}" class="delete-button">Delete</a>
+                </div>
+            </div>
+            {% endfor %}
+            <ul>
+                {% for workout in workouts %}
+                <li>{{ workout }}</li>
+                {% endfor %}
+            </ul>
+            <div class="add-workout-button">
+                <a href="/dashboard" class="btn btn-primary">Add New Workout</a>
+            </div>
         </div>
-
-        <div id="fitness-form" style="display: none;">
-            <label for="sets">Sets:</label>
-            <input type="number" id="sets" name="sets">
-            <label for="reps">Reps:</label>
-            <input type="number" id="reps" name="reps">
-        </div>
-
-        <div id="swimming-form" style="display: none;">
-            <label for="distance">Distance (km):</label>
-            <input type="number" id="distance" name="distance">
-            <label for="time">Time (minutes):</label>
-            <input type="number" id="time" name="time">
-        </div>
-
-        <button type="submit">Add Workout</button>
-    </form>
+    </div>
 </div>
-
-<script>
-document.getElementById("workout-type").addEventListener("change", function() {
-    var selectedType = this.value;
-    var runningForm = document.getElementById("running-form");
-    var fitnessForm = document.getElementById("fitness-form");
-    var swimmingForm = document.getElementById("swimming-form");
-
-    // Hide all form sections
-    runningForm.style.display = "none";
-    fitnessForm.style.display = "none";
-    swimmingForm.style.display = "none";
-
-    // Show the selected form section
-    if (selectedType === "running") {
-        runningForm.style.display = "block";
-    } else if (selectedType === "fitness") {
-        fitnessForm.style.display = "block";
-    } else if (selectedType === "swimming") {
-        swimmingForm.style.display = "block";
-    }
-
-    // Add more conditions for other workout types
-});
-</script>
-</body>
-</html>
 {% endblock main %}

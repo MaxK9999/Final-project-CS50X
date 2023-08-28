@@ -15,67 +15,51 @@
 
 
 {% block main %}
-<div class="progress">
-    <h1>My Progress</h1>
-    <div class="container_progress">
-        <div class="row_progress">
-            <div class="progress_bar">
-                <div class="bar_outer">
-                    <div class="bar_inner">
-                        <div id="number">
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <svg xlmns="http://www.w3.org/2000/svg" version="1.1"
-                width="160px" height="160px">
-                    <defs>
-                        <linearGradient id="GradientColor">
-                            <stop offset="0%" stop-color="#e91e63"/>
-                            <stop offset="100%" stop-color="#673ab7"/>
-                        </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round"/>
-                </svg>
+<h1 class="welcome_dashboard">Welcome {{ session["username"] }}!</h1>
+<br><br><br>
+<div class="welcome_message">
+    <p><span>Ready</span> to conquer the day? <br><span>Or</span> have you already given it your all?<br>
+    <span>No</span> matter which one it is, show us how hard you are working towards achieving YOUR goals!
+    </p>
+<br>
+</div>
+<section class="container_cards_workouts">
+    <div class="card_container">
+        <div class="card">
+            <div class="card-side-front">
             </div>
-            <div class="progress_bar">
-                <div class="bar_outer">
-                    <div class="bar_inner">
-                        <div id="number">
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <svg xlmns="http://www.w3.org/2000/svg" version="1.1"
-                width="160px" height="160px">
-                    <defs>
-                        <linearGradient id="GradientColor">
-                            <stop offset="0%" stop-color="#e91e63"/>
-                            <stop offset="100%" stop-color="#673ab7"/>
-                        </linearGradient>
-                    </defs>
-                    <circle cx="80" cy="80" r="70" stroke-linecap="round"/>
-                </svg>
+            <div class="card-side-back">
+                <i class="fa-solid fa-person-running"></i>
+            <h1>Running</h1>
+                <p>Log your new running workout here!</p>
+                <a href="/form_running">Click Here!</a>
+            </div>
+        </div>
+        </a>
+    </div>
+    <div class="card2_container">
+        <div class="card2">
+            <div class="card2-side-front">
+            </div>
+            <div class="card2-side-back">
+                <i class="fa-solid fa-dumbbell"></i>
+            <h1>Fitness</h1>
+                <p>Show us your gym progress by adding a new workout!</p>
+                <a href="/form_fitness">Click Here!</a>
             </div>
         </div>
     </div>
-</div>
-
-<script>
-let number = document.getElementById("number");
-let counter = -1;
-setInterval(() => {
-    if(counter == 70){
-        clearInterval();
-    } else {
-        counter +=1;
-        number.innerHTML = counter + "%"
-    }
-}, 21);
-
-</script>
-</body>
-</html>
+    <div class="card3_container">
+        <div class="card3">
+            <div class="card3-side-front">
+            </div>
+            <div class="card3-side-back">
+                <i class="fa-solid fa-person-swimming"></i>
+            <h1>Swimming</h1>
+                <p>Add a new swimming workout and continue logging your progress! </p>
+                <a href="/form_swimming">Click Here!</a>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock main %}

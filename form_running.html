@@ -1,0 +1,44 @@
+{% extends "dashboard.html" %}
+
+{% block title %}
+    New Workout
+{% endblock title %}
+
+{% block main %}
+<h1 class="add_workout_new">Add New Workout</h1>
+<div class="wrapper_workouts">
+    <div class="container_workouts">
+        <div class="box1">
+        <form action="/add_workout" method="post">
+            <input type="hidden" name="workout_type" value="running">
+            <div class="input-box">
+                <label for="date"></label>
+                <input type="date" name="date" required>
+            </div>
+            <div class="input-box">
+                <label for="distance"></label>
+                <input type="number" name="distance" step="0.01" placeholder="Distance (km)" required>
+            </div>
+            <div class="input-box">
+                <label for="time"></label>
+                <input type="number" name="time" placeholder="Time (minutes)" required>
+            </div>
+            <div class="input-box">
+                <label for="notes"></label>
+                <input type="text" name="notes" placeholder="Additional Notes: (How did it go? What type of run was it?)">
+            </div>
+            <p>Have you completed this workout?</p>
+            <label class="switch">
+                <input type="checkbox" name="completed">
+                <span class="slider round"></span>
+            </label>
+            <br>
+            <button type="submit" class="btn btn-primary">Add Workout!</button>
+        </form>
+        </div>
+        <div class="box3">
+            <h2>Running</h2>
+        </div>
+    </div>
+</div>
+{% endblock main %}
