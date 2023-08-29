@@ -1,0 +1,38 @@
+--------------21-08-2023--------------------
+login page as close as done, next thing to do is link the register page and make sure 
+database is set up.   -> DONE, succesfully setup and everything works!!!!!
+
+--------------22-08-2023--------------------
+tidy up home and about page.
+check if you can fix flash messages, perhaps tutorial? -> DONE, home/about page succesfully setup!!!
+
+--------------23-08-2023--------------------
+continue with "my workouts" and other pages.
+create table to store workouts and make an interface with progress data and the stored workouts. -> DONE, workouts table setup succesfully!!!
+
+--------------24-08-2023--------------------
+error messages and other flash messages setup and working -> DONE
+make landing page responsive on smaller devices -> HALF DONE, site is somewhat responsive but tends 
+                                                    to have small visual glitches when transforming from certain dimensions.
+tweaked database to ensure that email is registered in the users table aswell -> DONE
+login and register routing more bulletproofed -> DONE 
+3 cards that showcase what type of workouts users may add, visible on dashboard page -> DONE
+
+--------------28-08-2023--------------------
+work on the links on the photos to link directly to page that logs workouts. -> DONE 
+implement workouts page where you can view and edit/delete past workouts. -> Half DONE, page works but styling needs to be redone
+database fixes that have resulted in easier usage. -> DONE
+
+--------------29-08-2023--------------------
+finish up workouts page so you can delete and/or edit workouts. -> DONE
+make a page where users can edit their workouts. -> DONE
+!!!!!!!!!!!!!!!!!!!!!!!!!!! READY TO HAND IN PROJECT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+future plans:
+account information page?
+page where user can change his password or delete his account.
+progress bar for when user wants to set custom goals.
+date + time, perhaps a calender with weather report?
