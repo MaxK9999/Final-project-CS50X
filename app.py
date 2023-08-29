@@ -3,6 +3,7 @@ import re
 import os
 from flask import Flask, request, session, jsonify, redirect, render_template, flash, get_flashed_messages
 from flask_session import Session
+from datetime import timedelta
 from werkzeug.security import check_password_hash, generate_password_hash
 
 
@@ -16,10 +17,12 @@ Session(app)
 # Configure database
 DATABASE = 'users.db'
 
-app.secret_key = 'bnjvcwsiurghbnrw0912835880'
+app.secret_key = 'bnjvcwsiurgSDGSfdshgsadGGhbnrw0912835880'
 
 def connect_db():
-    return sqlite3.connect(DATABASE)
+    db_connection = sqlite3.connect(DATABASE)
+    db_connection.row_factory = sqlite3.Row
+    return db_connection
 
 def create_users_table():
     db = connect_db()
@@ -69,6 +72,12 @@ def login():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
+
+        remember_me = request.form.get('remember_me')
+
+        if remember_me:
+            session.permanent = True
+            app.permanent_session_lifetime = timedelta(days=7)
 
         if not username or not password:
             return "Username and password are required.", 400
@@ -144,6 +153,7 @@ def add_workout():
         workout_type = request.form.get("workout_type")
         date = request.form.get("date")
         user_id = session["user_id"]
+        completed = True if request.form.get("completed") == "on" else False
 
         db = connect_db()
         cursor = db.cursor()
@@ -207,7 +217,7 @@ def workouts():
         db = connect_db()
         cursor = db.cursor()
 
-        cursor.execute("SELECT * FROM workouts WHERE user_id = ?", (user_id,))
+        cursor.execute("SELECT * FROM workouts WHERE user_id = ? ORDER BY date DESC", (user_id,))
         workouts = cursor.fetchall()
 
         db.close()

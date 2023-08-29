@@ -18,10 +18,15 @@ tweaked database to ensure that email is registered in the users table aswell ->
 login and register routing more bulletproofed -> DONE 
 3 cards that showcase what type of workouts users may add, visible on dashboard page -> DONE
 
-
 --------------28-08-2023--------------------
 work on the links on the photos to link directly to page that logs workouts. -> DONE 
-implement workouts page where you can view and edit/delete past workouts.
+implement workouts page where you can view and edit/delete past workouts. -> Half DONE, page works but styling needs to be redone
+database fixes that have resulted in easier usage. -> DONE
+
+--------------29-08-2023--------------------
+finish up workouts page so you can delete and/or edit workouts. -> DONE
+make a page where users can edit their workouts. -> DONE
+!!!!!!!!!!!!!!!!!!!!!!!!!!! READY TO HAND IN PROJECT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 dashboard page:
@@ -30,11 +35,10 @@ tidy up workouts page, make sure that all forms have all the corresponding data 
 make the workouts page have 3 clickable photos linked to adding said workout (i.e. running, swimming, fitness). -> DONE
 
 
-workouts page:
-
-need to make progress bar/circle show when user wants to set a goal that he wishes to achieve.
-see the most recent workout displayed under the progress bar.
 
 
+future plans:
 account information page?
 page where user can change his password or delete his account.
+progress bar for when user wants to set custom goals.
+date + time, perhaps a calender with weather report?

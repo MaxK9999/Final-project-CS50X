@@ -11,14 +11,14 @@
         <form action="/login" method="post">
             <div class="input-box">
                 <i class="fa-solid fa-user"></i>
-                <input autocomplete="off" autofocus  id="username" name="username" placeholder="Username" type="text" required>
+                <input autofocus  id="username" name="username" placeholder="Username" type="text" autocomplete="new-username" required>
             </div>
             <div class="input-box">
                 <i class="fa-solid fa-lock"></i>
                 <input id="password" name="password" placeholder="Password" type="password" required>
             </div>
             <div class="remember-forgot">
-                <label><input type="checkbox">Remember Me</label>
+                <label><input type="checkbox" name="remember_me">Remember Me</label>
             </div>
             <button type="submit" class="btn btn-primary">Log In</button>
         </form>
