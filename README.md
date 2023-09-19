@@ -20,16 +20,13 @@ This project is built upon a full stack consisting of Python and Flask for the b
 
 # 1.1 - Homepage
 ![wrkout1](https://github.com/MaxK9999/Final-project-CS50X/assets/129183382/af06d48e-a400-4092-a697-071b8274ed48)
+https://github.com/MaxK9999/Final-project-CS50X/assets/129183382/7aeb15e1-818c-4267-9c40-97eae3cc2a06
 
 
 
 
 
 
-
-
-
-![Recording 2023-09-19 at 19 41 41](https://github.com/MaxK9999/Final-project-CS50X/assets/129183382/56e75edf-3985-4c11-92b9-d2a4c7664f8c)
 
 
 
