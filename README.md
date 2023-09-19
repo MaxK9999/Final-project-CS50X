@@ -29,6 +29,8 @@ This project is built upon a full stack consisting of Python and Flask for the b
 
 
 
+![Recording 2023-09-19 at 19 41 41](https://github.com/MaxK9999/Final-project-CS50X/assets/129183382/56e75edf-3985-4c11-92b9-d2a4c7664f8c)
+
 
 
 
