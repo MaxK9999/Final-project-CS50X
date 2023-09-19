@@ -9,14 +9,14 @@ It is supposed to be a very basic clone of other major fitness apps like Garmin 
 This project is built upon a full stack consisting of Python and Flask for the backend, SQLite3 for the database aswell as HTML, CSS and basic JS for the frontend.
 
 # Table of Contents
-1.1 - Homepage
-1.2 - About page
-2.1 - Register
-2.2 - Login
-3.1 - Dashboard
-3.2 - Add Workouts
-3.3 - My Workouts
-3.4 - Logout
+1.1. - Homepage
+1.2. - About page
+2.1. - Register
+2.2. - Login
+3.1. - Dashboard
+3.2. - Add Workouts
+3.3. - My Workouts
+3.4. - Logout
 
 # 1.1 - Homepage
 ![wrkout1](https://github.com/MaxK9999/Final-project-CS50X/assets/129183382/af06d48e-a400-4092-a697-071b8274ed48)
