@@ -1,7 +1,6 @@
 import sqlite3
 import re
-import os
-from flask import Flask, request, session, jsonify, redirect, render_template, flash, get_flashed_messages
+from flask import Flask, request, session, redirect, render_template, flash
 from flask_session import Session
 from datetime import timedelta
 from werkzeug.security import check_password_hash, generate_password_hash
